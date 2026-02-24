@@ -1,13 +1,3 @@
-
-<style>
-  img {
-    border: 3px solid #09991c;
-    border-radius: 5px;
-    padding: 2px;
-    box-shadow: 5px 5px 5px #23631a;
-  }
-</style>
-
 # How to Install TwinCAT 3.1 Build 4026
 
 We will install the most recent version, build **4026**.
