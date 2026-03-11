@@ -79,7 +79,7 @@ Very detailed video in [TwinCAT BSD in VirtualBox](https://www.youtube.com/watch
 If you want a summary:
 - install VirtualBox https://www.virtualbox.org/wiki/Downloads
 - download the [TwinCAT BSD runtime](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/operating-systems/c9900-s6xx-cxxxxx-0185.html) from Beckhoff. Mine was version 14.3.7.0, build 275264, 03.02.2026.
-- create a ready-to-use VirtualBox machine with: https://github.com/PTKu/TwinCAT-BSD-VM-creator
+- create a ready-to-use VirtualBox machine with: https://github.com/PTKu/TwinCAT-BSD-VM-creator. I used the Powershell script: `\Create-TcBsdVM.ps1 TC-BSD14 .\TCBSD-x64-14-2.iso`
 
 ![](img/install/TC-BSD-virtualbox.png)
 
