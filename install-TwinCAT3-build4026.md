@@ -23,6 +23,10 @@ Then, download the TwinCAT Package Manager from https://www.beckhoff.com/en-en/p
 
 ![](img/install/download-4026.png)
 
+Use the full version.
+
+![](img/install/twincat-package-manager-full.png)
+
 Install it and run. Setup the *Feeds* in Settings.
 
 ![](img/install/settings-icon.png)
