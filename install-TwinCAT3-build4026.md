@@ -1,13 +1,3 @@
-
-<style>
-  img {
-    border: 3px solid #09991c;
-    border-radius: 5px;
-    padding: 2px;
-    box-shadow: 5px 5px 5px #23631a;
-  }
-</style>
-
 # How to Install TwinCAT 3.1 Build 4026
 
 We will install the most recent version, build **4026**.
@@ -93,7 +83,7 @@ Very detailed video in [TwinCAT BSD in VirtualBox](https://www.youtube.com/watch
 If you want a summary:
 - install VirtualBox https://www.virtualbox.org/wiki/Downloads
 - download the [TwinCAT BSD runtime](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/operating-systems/c9900-s6xx-cxxxxx-0185.html) from Beckhoff. Mine was version 14.3.7.0, build 275264, 03.02.2026.
-- create a ready-to-use VirtualBox machine with: https://github.com/PTKu/TwinCAT-BSD-VM-creator
+- create a ready-to-use VirtualBox machine with: https://github.com/PTKu/TwinCAT-BSD-VM-creator. I used the Powershell script: `\Create-TcBsdVM.ps1 TC-BSD14 .\TCBSD-x64-14-275264.iso`
 
 ![](img/install/TC-BSD-virtualbox.png)
 
