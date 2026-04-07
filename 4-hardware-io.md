@@ -142,7 +142,7 @@ You can confirm visually that you have exactly the same topology shown in the Ge
 
 ![](img/hardware/el-terminals.jpg)
 
-## Testing inputs and outputs online
+### Testing inputs and outputs online
 
 Now, let's test the inputs and outputs without any program running yet. Let's start with the digital outputs in terminal EL2008. Click with right button on EL2008/Channel 1/Output. On the menu, select "Online Write '1'".
 
@@ -176,7 +176,7 @@ Do the same for the Channel 2, that is, open the Online view. Channel 2 is conne
 
 ![](img/hardware/el1008-channel2-online-after-switching.png)
 
-Last but not least, let's check the analog inputs in terminal EL3074. Click on the Term 4 (El3074) to open the General tab. You will see values are INT (integers) or as REAL32 (float values). This terminal is very configurable. We will set only two parameters:
+Last but not least, let's check the analog inputs in terminal EL3074. Click on Term 4 (EL3074) to open the General tab. You will see values are INT (integers) or as REAL32 (float values). This terminal is very configurable. We will set only two parameters:
 1. Values as REAL32 (if it is not showing already)
 2. Input range from 0 to 10 V
 
@@ -198,7 +198,7 @@ In the Set Value Dialog, select V 0-10V.
 
 ![](img/hardware/800D-input-interface-change-to-0-10V.png)
 
-You connected th Channel 1 of the EL3074 to a temperature sensor with 3 wires (+24V, signal, 0V).This temperature sensor is the [LM35](https://www.ti.com/lit/ds/symlink/lm35.pdf). It is calibrated to output voltage in a linear scale of 10 mV/°C. It means that if the temperature is around 22°C, you should read 0.22 V (220 mV). Check the value and make it change (if you hold the sensor with your hands, the temperature will increase).
+You connected Channel 1 of the EL3074 to a temperature sensor with 3 wires (+24V, signal, 0V). This temperature sensor is the [LM35](https://www.ti.com/lit/ds/symlink/lm35.pdf). It is calibrated to output voltage in a linear scale of 10 mV/°C. It means that if the temperature is around 22°C, you should read 0.22 V (220 mV). Check the value and make it change (if you hold the sensor in your hands, the temperature will increase).
 
 ### Program in ST with physical inputs and outputs
 
@@ -226,7 +226,7 @@ A dialog "Attach Variable Input" will open and a list of input variables that ca
 
 ![](img/hardware/el1008-channel1-change-link-attach-variable.png)
 
-Now, do a similar procedure for the output. Map the El2008/Channel **2**/Output to `bLight`.
+Now, do a similar procedure for the output. Map the EL2008/Channel **2**/Output to `bLight`.
 
 ![](img/hardware/el2008-channel2-change-link.png)
 
@@ -234,20 +234,20 @@ Note that an I/O mapped to a variable has a small mark (gray arrow on a white ba
 
 ![](img/hardware/not-linked-vs-linked-channels.png)
 
-The mapping also appears on the instance. You can confirm your two variables are linked to I/Os if they have the gray arrow on a white background. 
-
-There is also another way to link variables and I/Os that we will use in the future, using `attribute 'TcLinkTo'`. Then, the [mapping](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3107974923.html&id=) will appear as the gray arrow on a blue background.
+The mapping also appears on the instance. You can confirm your two variables are linked to I/Os if they have the gray arrow on a white background.
 
 ![](img/hardware/linked-variables-from-instance-view.png)
+
+There is also another way to link variables and I/Os that we will use in the future, using `attribute 'TcLinkTo'`. Then, the [mapping](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3107974923.html&id=) will appear as a gray arrow on a blue background.
 
 You can finally transfer the program to the IPC with "Activate Configuration".
 
 ![](img/hardware/activate-configuration.png)
 
- Then, change to runtime mode, log in the IPC and change the switch 1. The LED in the pushbutton should turn on. You can monitor the status of the variables also in the Online mode of the GVL_IO.
+ Then, change to runtime mode, log in the IPC and change the position of switch 1. The LED in the pushbutton should turn on. You can monitor the status of the variables also in the Online mode of the GVL_IO.
 
 ![](img/hardware/online-debug-view.png)
 
-### Activity
+## Activity
 
 Implement, step by step, the other versions of the refrigerator project.
