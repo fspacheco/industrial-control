@@ -27,6 +27,12 @@ Based on previous class: Refrigerator Controller
 - Acquisition and display of large quantities of data
 - Documentation at https://www.beckhoff.com/en-en/products/automation/twincat-3-scope/
 
+### Install TwinCAT Scope
+
+If this is the first time you try to use it, probably it is not installed. Open the TwinCAT Package Manager and search for "Scope". Install the module TE1300.
+
+![](img/scope/package-manager-te1300-scope.png)
+
 ### Create Scope Project
 
 First, add a new project under the same solution 'Refrigerator' that you created in the class about Visualization.
