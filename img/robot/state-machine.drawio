@@ -1,0 +1,73 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="pZzPjTgzrovJjawp3Qu4">
+    <mxGraphModel dx="1717" dy="1203" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Idle" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="RequestMoveP2" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="207" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="WaitRobotP2" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="333" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Cooling" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="RequestMoveP3" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="587" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="WaitRobotP3" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="713" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Done" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-8" edge="1" parent="1" source="HH6k_rIyFE6sgU60hmsr-1" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="HH6k_rIyFE6sgU60hmsr-2" value="When switch changes">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="360" as="sourcePoint" />
+            <mxPoint x="320" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-9" edge="1" parent="1" source="HH6k_rIyFE6sgU60hmsr-2" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HH6k_rIyFE6sgU60hmsr-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="360" as="sourcePoint" />
+            <mxPoint x="320" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-10" edge="1" parent="1" source="HH6k_rIyFE6sgU60hmsr-3" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HH6k_rIyFE6sgU60hmsr-4" value="When receive acknowledge from robot">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="360" as="sourcePoint" />
+            <mxPoint x="320" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-11" edge="1" parent="1" source="HH6k_rIyFE6sgU60hmsr-4" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HH6k_rIyFE6sgU60hmsr-5" value="When Temperature &amp;lt;= SetPoint">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="360" as="sourcePoint" />
+            <mxPoint x="320" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PLC sends command P2 to robot" vertex="1">
+          <mxGeometry height="30" width="90" x="200" y="267" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PLC sends command P3 to robot" vertex="1">
+          <mxGeometry height="30" width="90" x="200" y="647" as="geometry" />
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-14" edge="1" parent="1" source="HH6k_rIyFE6sgU60hmsr-5" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="HH6k_rIyFE6sgU60hmsr-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="550" as="sourcePoint" />
+            <mxPoint x="320" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HH6k_rIyFE6sgU60hmsr-15" edge="1" parent="1" source="HH6k_rIyFE6sgU60hmsr-6" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="HH6k_rIyFE6sgU60hmsr-7" value="When receive acknowledge from robot">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="930" as="sourcePoint" />
+            <mxPoint x="320" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

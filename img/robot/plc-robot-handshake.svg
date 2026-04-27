@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 680 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="var(--color-text-secondary)"/>
+    </marker>
+  </defs>
+
+  <text x="340" y="28" text-anchor="middle" class="th" fill="var(--color-text-primary)" style="font: 500 18px var(--font-sans);">PLC–Robot Handshake State Machine</text>
+  <text x="340" y="48" text-anchor="middle" class="ts" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">EL2008 DO4 commands MG400 DI8 • MG400 DO8 acknowledges via EL1008 DI8</text>
+
+  <g class="c-gray">
+    <rect x="40" y="80" width="600" height="120" rx="16" class="box" stroke-width="0.5"/>
+    <text x="70" y="104" fill="var(--color-text-primary)" style="font: 500 14px var(--font-sans);">Handshake meaning</text>
+
+    <rect x="70" y="120" width="240" height="54" rx="8" fill="var(--color-background-primary)" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+    <text x="190" y="141" text-anchor="middle" fill="var(--color-text-primary)" style="font: 500 13px var(--font-sans);">PLC command = TRUE</text>
+    <text x="190" y="159" text-anchor="middle" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">Robot must do P1 → P2</text>
+
+    <rect x="370" y="120" width="240" height="54" rx="8" fill="var(--color-background-primary)" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+    <text x="490" y="141" text-anchor="middle" fill="var(--color-text-primary)" style="font: 500 13px var(--font-sans);">Robot acknowledge = TRUE</text>
+    <text x="490" y="159" text-anchor="middle" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">Robot has reached P2</text>
+  </g>
+
+  <g class="c-blue node">
+    <rect x="35" y="250" width="120" height="56" rx="8" class="box" stroke-width="0.5"/>
+    <text x="95" y="272" text-anchor="middle" class="th">IDLE</text>
+    <text x="95" y="291" text-anchor="middle" class="ts">Cmd=0 Ack=0</text>
+  </g>
+
+  <g class="c-blue node">
+    <rect x="185" y="250" width="130" height="56" rx="8" class="box" stroke-width="0.5"/>
+    <text x="250" y="270" text-anchor="middle" class="th">REQUEST P2</text>
+    <text x="250" y="289" text-anchor="middle" class="ts">Set Cmd=1</text>
+  </g>
+
+  <g class="c-teal node">
+    <rect x="345" y="250" width="130" height="56" rx="8" class="box" stroke-width="0.5"/>
+    <text x="410" y="270" text-anchor="middle" class="th">COOLING</text>
+    <text x="410" y="289" text-anchor="middle" class="ts">Wait Temp ≤ SP</text>
+  </g>
+
+  <g class="c-purple node">
+    <rect x="505" y="250" width="140" height="56" rx="8" class="box" stroke-width="0.5"/>
+    <text x="575" y="270" text-anchor="middle" class="th">REQUEST P3</text>
+    <text x="575" y="289" text-anchor="middle" class="ts">Set Cmd=0</text>
+  </g>
+
+  <path d="M155 278 L185 278" fill="none" stroke="var(--color-text-secondary)" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M315 278 L345 278" fill="none" stroke="var(--color-text-secondary)" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M475 278 L505 278" fill="none" stroke="var(--color-text-secondary)" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <text x="170" y="245" text-anchor="middle" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">Start</text>
+  <text x="330" y="245" text-anchor="middle" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">Ack = 1</text>
+  <text x="490" y="245" text-anchor="middle" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">Temp OK</text>
+
+  <path d="M575 306 L575 355 L95 355 L95 306" fill="none" stroke="var(--color-text-secondary)" stroke-width="1.1" marker-end="url(#arrow)"/>
+  <text x="335" y="372" text-anchor="middle" fill="var(--color-text-secondary)" style="font: 12px var(--font-sans);">Ack = 0 → cycle complete → back to IDLE</text>
+</svg>
