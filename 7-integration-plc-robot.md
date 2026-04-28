@@ -83,7 +83,7 @@ If these tests don't work, ask help from the teacher.
 
 The MG400 side will do the following:
 
-1. Wait for `DI8 = TRUE`
+1. Wait for `DI8 = TRUE` (check the [DobotStudio Guide](https://download.dobot.cc/2024/04/DobotStudio%20Pro%20User%20Guide%20%28MG400%26M1%20Pro%29%20V2.8.0_20240226_en.pdf) page 114, "Wait digital input" or RoboDK, I/O menu, "Wait for Digital Input")
 2. Pick part at `Position 1` (remember to use approach and MovL)
 3. Move to `Position 2`
 4. Set `DO8 = TRUE`
